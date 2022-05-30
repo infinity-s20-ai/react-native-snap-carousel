@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View, ViewPropTypes } from 'react-native';
+import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View, LogBox} from 'react-native';
+import {ViewPropTypes} from 'deprecated-react-native-prop-types'; 
 import PropTypes from 'prop-types';
 import shallowCompare from 'react-addons-shallow-compare';
+LogBox.ignoreLogs(['new NativeEventEmitter']); // Ignore log notification by message
+LogBox.ignoreAllLogs();
 import {
     defaultScrollInterpolator,
     stackScrollInterpolator,
